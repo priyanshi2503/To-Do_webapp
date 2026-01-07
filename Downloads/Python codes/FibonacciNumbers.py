@@ -1,0 +1,18 @@
+class Solutions:
+    def fibonacciNumbers(self, n):
+        ans=[]
+        f1, f2 = 0, 1
+        ans.append(f1)
+        
+        for i in range(1, n):
+            ans.append(f2)
+            next = f1+f2
+            f1= f2
+            f2 = next
+        return ans 
+    
+if __name__ == '__main__':
+    n = 7
+    obj=Solutions()
+    res=obj.fibonacciNumbers(n)
+    print(' '.join(map(str, res)))
